@@ -1,0 +1,14 @@
+//一键更新
+namespace web.layout.behavior.btnOneKeyUp{
+	//鼠标单击
+	onMouseClick = function (ltTarget,ltEle,x,y,ltMouseParams) {
+    	var winform = ltEle.getForm(); //获得winform对象
+    	var wbLayout = ltEle.getLayout(); //获得layout对象
+		if(ltTarget.loading!=null){
+			winform.msgbox("正在更新中，请稍后。","(╯‵□′)╯︵┻━┻淡定...")
+			return ;
+		}
+		ltTarget.loading = "true";
+		var sGamePath = wbLayout.queryEle("#txtGamePath").value;
+	}
+}

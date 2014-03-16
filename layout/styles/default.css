@@ -1,0 +1,40 @@
+﻿@const BORDER_COLOR: #DADADA; 
+@const CLIENT_COLOR: #EFEFEF; 
+@const PANEL_COLOR: #E8E8E8; 
+@const PANEL_HOVER_COLOR: #EFEFEF; 
+@const CAPTION_HEIGHT: 40px;  
+@const MENU_WIDTH: 116px;  
+
+body {
+  margin: 0; 
+  border: 0px solid @BORDER_COLOR; 
+  border-radius: 4px;
+  background: @CLIENT_COLOR;
+  font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+} 
+.main-left-container { background:url(images/left-bottom.png) repeat-y; width:@MENU_WIDTH; height:100%; }
+.main-left { background:url(images/left.png) no-repeat; width:@MENU_WIDTH; height:100%; }
+.left-menu-container { margin-top: 40px; }
+.left-menu {
+    margin-bottom:1px; padding:10px 0 15px 20px; float:left; width:@MENU_WIDTH; cursor:pointer;
+    font:normal bold 18px/20px "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    color: white; background:url(images/menu-bg.png) repeat-y; behavior: menutab;
+}
+.left-menu[selected] { background:url(images/menu-selected-bg.png) repeat-y; }
+.left-menu:hover { background:url(images/menu-hover-bg.png) repeat-y; }
+
+/* 内容区 */
+.main-right-container {
+	vertical-scrollbar: mini_scrollbar;
+	position: absolute; top: @CAPTION_HEIGHT; right: 0; bottom: 0; left:@MENU_WIDTH;
+    border-top:1px solid @BORDER_COLOR;
+	background: @PANEL_COLOR;
+}
+.main-right-container div[name] {
+	display: block; padding: 0; margin: 0; 
+	position: absolute; top: 0; right: 0; bottom: 0; left:0;
+	overflow: auto; vertical-scrollbar: mini_scrollbar;
+	visibility: hidden; background: @PANEL_COLOR;
+}
+.main-right-container div[selected] { visibility:visible; } 
+.panel_content { font-size: 16px; margin: 10px; }

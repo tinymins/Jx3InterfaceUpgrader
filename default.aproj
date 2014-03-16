@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="gb2312"?>
+<project ver="3" name="剑网三插件更新器" libEmbed="true" icon="" CompanyName="" FileDescription="YYLMACRO" LegalCopyright="Copyright (C) 作者 2014" ProductName="YYLMACRO" InternalName="YYLMACRO" FileVersion="0.0.0.2" ProductVersion="0.0.0.2" publishDir="/Publish/" ui="win" output="HTMLayout.exe">
+	<file name="main.aau" path="main.aau"/>
+	<folder name="资源文件(web.layout)" path="layout" comment="" embed="true">
+		<file name="windowBorder.html" path="layout\windowBorder.html" comment="layout\windowBorder.html"/>
+		<file name="default.html" path="layout\default.html" comment="layout\default.html"/>
+		<folder name="plugin" path="layout\plugin" comment="layout\plugin">
+			<file name="yylmacro.html" path="layout\plugin\yylmacro.html" comment="layout\plugin\yylmacro.html"/>
+			<file name="main.html" path="layout\plugin\main.html" comment="layout\plugin\main.html"/>
+			<file name="jx3auction.html" path="layout\plugin\jx3auction.html" comment="layout\plugin\jx3auction.html"/>
+			<file name="j3ui.html" path="layout\plugin\j3ui.html" comment="layout\plugin\j3ui.html"/>
+			<file name="j3box.html" path="layout\plugin\j3box.html" comment="layout\plugin\j3box.html"/>
+			<file name="haiman.html" path="layout\plugin\haiman.html" comment="layout\plugin\haiman.html"/>
+			<file name="about.html" path="layout\plugin\about.html" comment="layout\plugin\about.html"/>
+		</folder>
+		<folder name="styles" path="layout\styles" comment="layout\styles">
+			<file name="windowBorder.css" path="layout\styles\windowBorder.css" comment="layout\styles\windowBorder.css"/>
+			<file name="global.css" path="layout\styles\global.css" comment="layout\styles\global.css"/>
+			<file name="default.css" path="layout\styles\default.css" comment="layout\styles\default.css"/>
+			<folder name="images" path="layout\styles\images" comment="layout\styles\images">
+				<file name="_0003_LEFT.png" path="layout\styles\images\_0003_LEFT.png" comment="layout\styles\images\_0003_LEFT.png"/>
+				<file name="menu-selected-bg.png" path="layout\styles\images\menu-selected-bg.png" comment="layout\styles\images\menu-selected-bg.png"/>
+				<file name="menu-hover-bg.png" path="layout\styles\images\menu-hover-bg.png" comment="layout\styles\images\menu-hover-bg.png"/>
+				<file name="menu-bg.png" path="layout\styles\images\menu-bg.png" comment="layout\styles\images\menu-bg.png"/>
+				<file name="left.png" path="layout\styles\images\left.png" comment="layout\styles\images\left.png"/>
+				<file name="left-bottom.png" path="layout\styles\images\left-bottom.png" comment="layout\styles\images\left-bottom.png"/>
+				<file name="caption-buttons.png" path="layout\styles\images\caption-buttons.png" comment="layout\styles\images\caption-buttons.png"/>
+			</folder>
+		</folder>
+	</folder>
+</project>

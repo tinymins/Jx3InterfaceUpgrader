@@ -1,0 +1,11 @@
+//¸üÐÂÆ÷ÉèÖÃ
+import fsys.ini;
+namespace tms.jx3interface.upgrader.setting{
+	var SETTING_FILE_PATH = "/tms.j3upgrader.ini";
+	loadSetting = function(){
+		fsys.file(SETTING_FILE_PATH,"a+").close()
+		var iniObj = fsys.ini(SETTING_FILE_PATH);
+		var sJx3Path = iniObj.read("CONFIG","JX3PATH");
+		var bAutoUp = iniObj.read("CONFIG","bAutoUp",false);
+	}
+}

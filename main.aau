@@ -1,0 +1,36 @@
+import win.ui;
+/*DSG{{*/
+var winform = ..win.form(text="剑网三插件更新器";right=800;bottom=520;border="none")
+winform.add()
+/*}}*/
+
+import web.form; 
+import web.layout;
+import win.ui.ctrl.static;
+import web.layout.behavior.windowSizer;//支持拖动边框
+import web.layout.behavior.windowCommand;//支持标题栏按钮
+
+//自定义behavior库
+import web.layout.behavior.menutab;
+import web.layout.behavior.btnOneKeyUp;
+import tms.jx3interface.upgrader.setting;
+
+wbLayout = web.layout( winform )
+
+
+//wbLayout.onButtonClick = function (ltTarget,ltEle,reason,behaviorParams) {
+//	winform.msgbox("点击了:" + ltEle.outerHTML )
+//	winform.msgbox("点击了:" + wbLayout.$1("body").outerHTML )
+//}	
+wbLayout.go("/layout/default.html") 
+
+//圆角窗口
+import win.util.round;
+win.util.round(winform);
+
+tms.jx3interface.upgrader.setting.loadSetting();
+
+winform.show();
+
+win.loopMessage();
+return winform;
