@@ -17,6 +17,8 @@ import tms.jx3interface.upgrader.setting;
 
 wbLayout = web.layout( winform )
 
+import web.layout.debug;
+wbLayout.attachEventHandler( web.layout.debug );
 
 //wbLayout.onButtonClick = function (ltTarget,ltEle,reason,behaviorParams) {
 //	winform.msgbox("点击了:" + ltEle.outerHTML )
@@ -24,11 +26,15 @@ wbLayout = web.layout( winform )
 //}	
 wbLayout.go("/layout/default.html") 
 
+//添加阴影边框
+import win.ui.shadow;
+win.ui.shadow(winform);
 //圆角窗口
-import win.util.round;
-win.util.round(winform);
+//import win.util.round;
+//win.util.round(winform);
 
 tms.jx3interface.upgrader.setting.loadSetting();
+tms.jx3interface.upgrader.setting.saveSetting("C:/",false);
 
 winform.show();
 

@@ -1,0 +1,28 @@
+<div id="btnToggleSettingPanel" aniStartVal="-580" aniEndVal="0"><a style="color:#FFF">目录设置：</a><input type="text" id="txtGamePath" style="font-size:14px" /><a id="btnSelectPath" class="button">...</a></div>
+<style type="text/css">
+/* 图像已下载完成 */
+#btnToggleSettingPanel {
+    z-index:9999;
+    font:normal bold 18px/20px "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    position: absolute; width: 600px; left:-580px; padding: 5px; top:10px;
+    background-color:#444; cursor:pointer; opacity: 0.75;
+	/*初始化事件*/
+	hover-on!:
+        self.stop-timer(),self::left==-580?(self.stop-animation(),self.aniEndVal="0",self.start-animation( 0.3s )); /*启动动画*/
+    hover-off!: 
+        self::left==0?self.start-timer( 900 ); /*启动动画*/
+    
+    /*动画事件*/
+    animation-step!:
+        self.aniEndVal=="0"?(nStartVal=-580px,nEndVal=0px)#(nStartVal=0px,nEndVal=-580px),
+        self::left = morph( "cubic-out", nStartVal, nEndVal );
+    
+    /*动画被终止直接跳至结束帧*/
+    animation-end!:
+        self::left = int(self.aniEndVal); 
+    
+    /*计时器 离开一秒后收起设置面版*/
+    timer!:
+        self.aniEndVal="-580",self.stop-animation(),self.start-animation( 1s ),self.stop-timer();
+}
+</style>

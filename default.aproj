@@ -3,7 +3,15 @@
 	<file name="main.aau" path="main.aau"/>
 	<folder name="资源文件(web.layout)" path="layout" comment="" embed="true">
 		<file name="windowBorder.html" path="layout\windowBorder.html" comment="layout\windowBorder.html"/>
+		<file name="tms.j3upgrader.ini" path="layout\tms.j3upgrader.ini" comment="layout\tms.j3upgrader.ini"/>
 		<file name="default.html" path="layout\default.html" comment="layout\default.html"/>
+		<file name="app.ico" path="layout\app.ico" comment="layout\app.ico"/>
+		<folder name="js" path="layout\js" comment="layout\js">
+			<file name="default.js" path="layout\js\default.js" comment="layout\js\default.js"/>
+			<folder name="jquery" path="layout\js\jquery" comment="layout\js\jquery">
+				<file name="jquery.min.js" path="layout\js\jquery\jquery.min.js" comment="layout\js\jquery\jquery.min.js"/>
+			</folder>
+		</folder>
 		<folder name="plugin" path="layout\plugin" comment="layout\plugin">
 			<file name="yylmacro.html" path="layout\plugin\yylmacro.html" comment="layout\plugin\yylmacro.html"/>
 			<file name="main.html" path="layout\plugin\main.html" comment="layout\plugin\main.html"/>
@@ -12,13 +20,18 @@
 			<file name="j3box.html" path="layout\plugin\j3box.html" comment="layout\plugin\j3box.html"/>
 			<file name="haiman.html" path="layout\plugin\haiman.html" comment="layout\plugin\haiman.html"/>
 			<file name="about.html" path="layout\plugin\about.html" comment="layout\plugin\about.html"/>
+			<folder name="css" path="layout\plugin\css" comment="layout\plugin\css"/>
+			<folder name="images" path="layout\plugin\images" comment="layout\plugin\images">
+				<file name="one_key_up_loading.gif" path="layout\plugin\images\one_key_up_loading.gif" comment="layout\plugin\images\one_key_up_loading.gif"/>
+				<file name="one_key_up_hover.png" path="layout\plugin\images\one_key_up_hover.png" comment="layout\plugin\images\one_key_up_hover.png"/>
+				<file name="one_key_up.png" path="layout\plugin\images\one_key_up.png" comment="layout\plugin\images\one_key_up.png"/>
+			</folder>
 		</folder>
 		<folder name="styles" path="layout\styles" comment="layout\styles">
 			<file name="windowBorder.css" path="layout\styles\windowBorder.css" comment="layout\styles\windowBorder.css"/>
 			<file name="global.css" path="layout\styles\global.css" comment="layout\styles\global.css"/>
 			<file name="default.css" path="layout\styles\default.css" comment="layout\styles\default.css"/>
 			<folder name="images" path="layout\styles\images" comment="layout\styles\images">
-				<file name="_0003_LEFT.png" path="layout\styles\images\_0003_LEFT.png" comment="layout\styles\images\_0003_LEFT.png"/>
 				<file name="menu-selected-bg.png" path="layout\styles\images\menu-selected-bg.png" comment="layout\styles\images\menu-selected-bg.png"/>
 				<file name="menu-hover-bg.png" path="layout\styles\images\menu-hover-bg.png" comment="layout\styles\images\menu-hover-bg.png"/>
 				<file name="menu-bg.png" path="layout\styles\images\menu-bg.png" comment="layout\styles\images\menu-bg.png"/>
