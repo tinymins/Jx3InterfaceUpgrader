@@ -13,10 +13,12 @@ import web.layout.behavior.windowCommand;//支持标题栏按钮
 //自定义behavior库
 import web.layout.behavior.menutab;
 import web.layout.behavior.btnOneKeyUp;
+import web.layout.behavior.btnSelectPath;
 import tms.jx3interface.upgrader.setting;
+import tms.application.upgrader;
 
-wbLayout = web.layout( winform )
-
+wbLayout = web.layout( winform );
+//调试
 import web.layout.debug;
 wbLayout.attachEventHandler( web.layout.debug );
 
@@ -26,6 +28,10 @@ wbLayout.attachEventHandler( web.layout.debug );
 //}	
 wbLayout.go("/layout/default.html") 
 
+//退出时保存设置
+winform.onClose = function(hwnd,message,wParam,lParam){
+    tms.jx3interface.upgrader.setting.saveSetting(wbLayout.queryEle("#txtGamePath").value,false);
+}
 //添加阴影边框
 import win.ui.shadow;
 win.ui.shadow(winform);
@@ -33,10 +39,12 @@ win.ui.shadow(winform);
 //import win.util.round;
 //win.util.round(winform);
 
-tms.jx3interface.upgrader.setting.loadSetting();
-tms.jx3interface.upgrader.setting.saveSetting("C:/",false);
+//加载设置
+var sJx3Path, bAutoUp = tms.jx3interface.upgrader.setting.loadSetting();
+wbLayout.queryEle("#txtGamePath").value = sJx3Path;
 
+//显示主窗体
 winform.show();
-
+//窗体消息响应循环
 win.loopMessage();
 return winform;

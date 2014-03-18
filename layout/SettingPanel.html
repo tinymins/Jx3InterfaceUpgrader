@@ -1,6 +1,6 @@
 <div id="btnToggleSettingPanel" aniStartVal="-580" aniEndVal="0"><a style="color:#FFF">目录设置：</a><input type="text" id="txtGamePath" style="font-size:14px" /><a id="btnSelectPath" class="button">...</a></div>
 <style type="text/css">
-/* 图像已下载完成 */
+/* 设置面板动画 */
 #btnToggleSettingPanel {
     z-index:9999;
     font:normal bold 18px/20px "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
@@ -25,4 +25,15 @@
     timer!:
         self.aniEndVal="-580",self.stop-animation(),self.start-animation( 1s ),self.stop-timer();
 }
+#txtGamePath {
+    width: 450px;
+    background: @PANEL_COLOR;
+    border:1px solid @PANEL_COLOR;
+}
+#txtGamePath:hover, #txtGamePath:focus {
+    background: @PANEL_HOVER_COLOR;
+    border:1px solid #000;
+}
+#btnSelectPath { margin-left:10px;padding:0 5px;background-color:#DDD; behavior:btnSelectPath; }
+#btnSelectPath:hover { background-color:#EEE; }
 </style>
