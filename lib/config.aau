@@ -1,4 +1,4 @@
-//应用配置文件
+//config 应用配置文件
 import fsys.config;
 config  = ..fsys.config("/config/"); 
 

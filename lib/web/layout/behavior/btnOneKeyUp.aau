@@ -1,5 +1,6 @@
 //一键更新
 namespace web.layout.behavior.btnOneKeyUp{
+	import tms.jx3interface;
 	//鼠标单击
 	onMouseClick = function (ltTarget,ltEle,x,y,ltMouseParams) {
     	var winform = ltEle.getForm(); //获得winform对象
@@ -8,6 +9,8 @@ namespace web.layout.behavior.btnOneKeyUp{
 			winform.msgbox("正在更新中，请稍后。","(╯‵□′)╯︵┻━┻淡定...")
 			return ;
 		}
+		
+		winform.msgbox( ..tms.jx3interface.getCount() );
 		ltTarget.loading = "true";
 		var sGamePath = wbLayout.queryEle("#txtGamePath").value;
 	}

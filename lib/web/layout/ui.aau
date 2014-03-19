@@ -1,0 +1,13 @@
+//ui 界面数据
+namespace web.layout.ui{
+	setGamePath = function(sGamePath){
+		..wbLayout.queryEle("#txtGamePath").value = sGamePath;
+	}
+	getGamePath = function(sGamePath){
+		return ..wbLayout.queryEle("#txtGamePath").value;
+	}
+	setInterfaceSummary = function(nTotalCount,nCanUpdateCount){
+		..wbLayout.queryEle("#tipInterfaceSummary").value = ..string.format("检测到%d个插件，%d个可更新。",nTotalCount,nCanUpdateCount);
+	}
+	
+}

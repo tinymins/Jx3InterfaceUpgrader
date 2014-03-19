@@ -10,7 +10,7 @@ namespace tms.jx3interface.upgrader.setting{
 		//var f = fsys.file(SETTING_FILE_PATH,"a+").close()
 		var iniObj = fsys.ini(SETTING_FILE_PATH);
 		var sJx3Path = iniObj.read("CONFIG","JX3PATH");
-		if(!(sJx3Path && ..io.exist(sJx3Path))) {
+		if(!(sJx3Path && ..tms.jx3interface.isGamePath(sJx3Path))) {
 			var reg = win.reg("HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\kingsoft\JX3\zhcn\",true);
 			if(!reg) { reg = win.reg("HKEY_LOCAL_MACHINE\SOFTWARE\Kingsoft\JX3\zhcn\",true); }
 			if(reg) { sJx3Path = reg.queryValue("installPath"); }

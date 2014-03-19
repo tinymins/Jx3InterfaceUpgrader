@@ -6,6 +6,6 @@ namespace web.layout.behavior.btnSelectPath{
     	var winform = ltEle.getForm(); //获得winform对象
     	var wbLayout = ltEle.getLayout(); //获得layout对象
 		var sJx3Path = fsys.dlg.opendir(wbLayout.queryEle("#txtGamePath").value,winform.hwnd ,"请选择游戏目录","如 C:\Kingsoft\JX3\bin\zhcn");
-		if(sJx3Path) { wbLayout.queryEle("#txtGamePath").value = sJx3Path; }
+		if(..tms.jx3interface.isGamePath(sJx3Path)) { ..web.layout.ui.setGamePath(sJx3Path); } elseif(sJx3Path) { ..winform.msgbox("没有检测到游戏文件，请选择正确的目录。") }
 	}
 }
