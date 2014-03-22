@@ -8,7 +8,7 @@ namespace web.layout.ui{
 	getText = function(szEleQuery){ var ele = ..wbLayout.queryEle(szEleQuery); if(ele) return ele.innerText; else return null; };
 	//目录设定
 	setGamePath = function(szText){ setText("#txtGamePath",szText);thread.set("szGamePath", szText);}
-	getGamePath = function(){ return thread.get("szGamePath"); }
+	getGamePath = function(){ return thread.get("szGamePath")||""; }
 	//主提示框设定
 	setMainTips = function(nTotalCount,nCanUpdateCount){
         thread.command.post(hwnd,"SetText","#tipInterfaceSummary",..string.format("检测到%d个插件，%d个可更新。",nTotalCount,nCanUpdateCount));
@@ -30,6 +30,12 @@ namespace web.layout.ui{
 		
 	}
 	initUiAnsy = function(hwnd){
+		try{
+			// 炒鸡宏
+			var browser = wbLayout.queryEle("#browser_yyl").getCtrl()._embedObject;
+			browser.go("http://www.yylmacro.com/yylmacro");
+			
+		}
 		thread.create( function( hwnd ){ try {
 			import preg; import thread.command; import inet.http;
 			var http = inet.http(); http.setTimeouts(3000,3000,3000);

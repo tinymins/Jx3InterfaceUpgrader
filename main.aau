@@ -72,6 +72,7 @@ thread.create(
     	var nTotalCount,nCanUpdateCount = tms.jx3interface.getCount(),0;
 		if(tms.jx3interface.isGamePath(sJx3Path)) {
         	thread.command.post(hwnd,"szGamePath",sJx3Path);
+        	thread.set("szGamePath", sJx3Path);
         	var i = 1;
         	tms.jx3interface.each(function(tInfo){
         		thread.command.post(hwnd,"szMainTips",string.format("%d/%d %s", i, nTotalCount,tInfo.name) );
@@ -85,8 +86,6 @@ thread.create(
 		}
     },winform.hwnd
 );
-		var browser = wbLayout.queryEle("#browser_yyl").getCtrl()._embedObject;
-		browser.go("http://www.yylmacro.com/yylmacro");
 web.layout.ui.initUiAnsy(winform.hwnd);
 // test
 
