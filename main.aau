@@ -51,7 +51,7 @@ wbLayout.go("/layout/default.html")
 web.layout.ui.initThreadCommand();
 //退出时保存设置
 winform.onClose = function(hwnd,message,wParam,lParam){
-   // tms.jx3interface.upgrader.setting.saveSetting(tms.jx3interface.getGamePath(),false);
+    tms.jx3interface.upgrader.setting.saveSetting(tms.jx3interface.getGamePath(),false);
 }
 //添加阴影边框
 import win.ui.shadow;
